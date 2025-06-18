@@ -603,6 +603,7 @@ table .bg-color-secondary {
 	}
 	.btn {
 		color: #fff !important;
+		justify-content: center;
 		&:hover:after {
 			background-color: $theme-color4 !important;
 		}

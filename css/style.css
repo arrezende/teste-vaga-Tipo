@@ -724,7 +724,7 @@ header .header-area {
     header .header-area .header-main .close-nav-menu {
       font-size: 27px;
       background-color: transparent;
-      color: #004c2e;
+      color: #fff;
       margin: 0 0 15px 15px;
       cursor: pointer;
       display: none;
@@ -2143,7 +2143,8 @@ table .bg-color-secondary {
 .ctaInt .title {
   color: #fff; }
 .ctaInt .btn {
-  color: #fff !important; }
+  color: #fff !important;
+  justify-content: center; }
   .ctaInt .btn:hover:after {
     background-color: #d97706 !important; }
 .ctaInt .bntSecondary {
