@@ -1,0 +1,28 @@
+<Files ~ "^.*\.([Hh][Tt][Aa])">
+Order Allow,Deny
+Deny From All
+Satisfy All
+</Files>
+
+<IfModule mod_headers.c>
+  Header set X-UA-Compatible "IE=Edge"
+  <FilesMatch "\.(appcache|crx|css|eot|gif|htc|ico|jpe?g|js|m4a|m4v|manifest|mp4|oex|oga|ogg|ogv|otf|pdf|png|safariextz|svg|svgz|ttf|vcf|webm|webp|woff|xml|xpi)$">
+    Header unset X-UA-Compatible
+  </FilesMatch>
+</IfModule>
+
+ErrorDocument 400 /erro
+ErrorDocument 401 /erro
+ErrorDocument 403 /erro
+ErrorDocument 404 /erro
+ErrorDocument 500 /erro
+
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+
+
+
+# SE A PÁGINA ESTIVER DENTRO DO SOURCE UTILIZAR ESSA OTIMIZAÇÃO DE URL
+
+RewriteRule ^([a-z,0-9,A-Z,_-]+)\/?$ $1.php [NC]
